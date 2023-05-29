@@ -4,7 +4,7 @@ function App() {
   const [number, setNumber] = useState<number>(0)
 
   const handleClick = () => {
-    setNumber(number + 1)
+    setNumber((prevNum) => prevNum + 1)
   }
 
   return (
