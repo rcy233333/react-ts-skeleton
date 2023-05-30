@@ -69,7 +69,13 @@ trim_trailing_whitespace = false
 - eslint 配置很多 我们使用命令 来配置 - npx eslint --init - 按照我们的需求进行选择
   我们可能会遇到 commonjs 规范的代码报错，需要我们在 eslint 的 env 配置中加上 node:true
   ts 文件中的 commonjs 规范报错我们在 eslint 中的 rules 配置
-  "@typescript-eslint/no-var-requires": "off"
+```js
+  rules: {
+    '@typescript-eslint/no-var-requires': 'off', // 解决ts文件中的commonjs 规范报错
+    'react/react-in-jsx-scope': 'off', // 解决 使用jsx 时必须导入React
+    'react/jsx-uses-react': 'off'  // 极倔 使用jsx 必须导入React
+  }
+```
 
 **需要把 eslint 和 prettier 代码风格保持一致**
 解决 eslint 和 prettier 冲突的问题
@@ -188,3 +194,8 @@ npx commitizen init cz-conventional-changelog --save-dev --save-exact
 我们也可以在scripts中构建一个命令来执行 cz：
  
 ![image-20210723150526211](https://tva1.sinaimg.cn/large/008i3skNgy1gsqwc4gtkxj30e207174t.jpg)
+
+
+
+### 配置路由
+1. 安装react-router-dom

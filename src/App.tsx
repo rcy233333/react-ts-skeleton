@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+// import Home from './views/home'
+
 function App() {
   const [number, setNumber] = useState<number>(0)
 
